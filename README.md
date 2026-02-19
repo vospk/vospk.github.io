@@ -6,7 +6,7 @@
     <title>Pastel Website</title>
     <style>
         body {
-            background-color: #d4a5d9;
+            background-color: #1a1a2e;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             padding: 20px;
             margin: 0;
