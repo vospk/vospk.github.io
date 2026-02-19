@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pastel Website</title>
+    <title>Pastel Dark Website</title>
     <style>
         body {
-            background-color: #fef9f3;
+            background-color: #1a1a2e;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             padding: 20px;
             margin: 0;
@@ -17,6 +17,7 @@
             text-align: center;
             font-size: 48px;
             margin-bottom: 30px;
+            text-shadow: 0 2px 10px rgba(212, 165, 217, 0.3);
         }
 
         h2 {
@@ -31,7 +32,7 @@
         }
 
         p {
-            color: #6b5b7e;
+            color: #e0e0e0;
             font-size: 18px;
             line-height: 1.8;
         }
@@ -42,85 +43,50 @@
         }
 
         .box {
-            background-color: #e8d5f2;
+            background-color: #2d2d44;
             padding: 25px;
             margin: 20px 0;
             border-radius: 15px;
             border-left: 5px solid #d4a5d9;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         }
 
         .box2 {
-            background-color: #ffd4e5;
-            color: #6b5b7e;
+            background-color: #3a2a3a;
+            color: #e0e0e0;
             padding: 25px;
             margin: 20px 0;
             border-radius: 15px;
             border-left: 5px solid #ffb3d9;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         }
 
         .box3 {
-            background-color: #d4f1f4;
-            color: #6b5b7e;
+            background-color: #1f3a3a;
+            color: #e0e0e0;
             padding: 25px;
             margin: 20px 0;
             border-radius: 15px;
             border-left: 5px solid #a8d8ea;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         }
 
         .box4 {
-            background-color: #fff4e6;
-            color: #6b5b7e;
+            background-color: #3a3120;
+            color: #e0e0e0;
             padding: 25px;
             margin: 20px 0;
             border-radius: 15px;
             border-left: 5px solid #ffe5cc;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         }
 
         .feature {
-            background-color: #f0e6fa;
+            background-color: #242438;
             padding: 15px;
             margin: 15px 0;
             border-radius: 10px;
             border-left: 4px solid #d4a5d9;
         }
 
-        .feature h4 {
-            color: #b19cd9;
-            margin: 0 0 10px 0;
-        }
-
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <h1>✨ Welcome to My Pastel Website</h1>
-
-        <div class="box">
-            <h2>About Us</h2>
-            <p>Welcome to our soft and serene pastel-colored website. We believe in creating beautiful, calming digital spaces that bring joy and creativity to your experience.</p>
-        </div>
-
-        <div class="box2">
-            <h2>Our Services</h2>
-            <div class="feature">
-                <h4>🎨 Web Design</h4>
-                <p>Stunning pastel designs that are modern, clean, and user-friendly.</p>
-            </div>
-            <div class="feature">
-                <h4>💻 Web Development</h4>
-                <p>Building beautiful websites with smooth functionality and great performance.</p>
-            </div>
-            <div class="feature">
-                <h4>📱 Mobile Friendly</h4>
-                <p>Your website looks amazing on all devices - phones, tablets, and desktops.</p>
-            </div>
-        </div>
-
-        <div class="box3">
-            <h2>Why Choose Us?</h2>
-            <p>We specialize in creating soft
+        .feature h
