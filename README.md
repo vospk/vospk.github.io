@@ -98,11 +98,11 @@
 <body>
 
     <div class="container">
-        <h1>✨ Welcome to My Pastel Website</h1>
+        <h1>Welcome to Vospk</h1>
 
         <div class="box">
             <h2>About Us</h2>
-            <p>Welcome to our soft and serene pastel-colored website. We believe in creating beautiful, calming digital spaces that bring joy and creativity to your experience.</p>
+            <p>At our core, we are dedicated to empowering individuals with smarter, data-driven health insights. Our disease prediction platform uses advanced algorithms and intelligent analysis to assess symptoms, lifestyle factors, and health indicators to provide personalized risk evaluations. Beyond prediction, our website offers tailored health recommendations, practical wellness advice, and an easy-to-understand health score that reflects your overall well-being. We believe that preventive care starts with awareness, and our mission is to make reliable health guidance accessible, simple, and actionable for everyone. By combining technology with health expertise, we aim to help you make informed decisions and take proactive steps toward a healthier future..</p>
         </div>
 
         <div class="box2">
