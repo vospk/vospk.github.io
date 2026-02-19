@@ -186,11 +186,11 @@
 <body>
 
     <div class="container">
-        <h1>💼 Welcome to Your Professional Website</h1>
+        <h1> Welcome to Vospk</h1>
 
         <div class="box">
             <h2>About Us</h2>
-            <p>Welcome to our professionally designed website built with a modern, clean color palette. We specialize in creating beautiful digital experiences that are both functional and visually stunning. Our team is dedicated to bringing your vision to life.</p>
+            <p>At our core, we are dedicated to empowering individuals with smarter, data-driven health insights. Our disease prediction platform uses advanced algorithms and intelligent analysis to assess symptoms, lifestyle factors, and health indicators to provide personalized risk evaluations. Beyond prediction, our website offers tailored health recommendations, practical wellness advice, and an easy-to-understand health score that reflects your overall well-being. We believe that preventive care starts with awareness, and our mission is to make reliable health guidance accessible, simple, and actionable for everyone. By combining technology with health expertise, we aim to help you make informed decisions and take proactive steps toward a healthier future.</p>
             <button>Learn More</button>
         </div>
 
