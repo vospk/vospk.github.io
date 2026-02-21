@@ -291,6 +291,99 @@
             text-align: center;
             font-size: 18px;
             color: #555;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        /* BMI Chart Styles */
+        .bmi-chart {
+            margin-top: 30px;
+            border-collapse: collapse;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .bmi-chart th {
+            background-color: #0077B6;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .bmi-chart td {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            color: #023047;
+            font-size: 15px;
+        }
+
+        .bmi-chart tr:last-child td {
+            border-bottom: none;
+        }
+
+        .bmi-chart tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .chart-title {
+            text-align: center;
+            color: #0077B6;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+
+        .underweight-row {
+            border-left: 5px solid #2196F3;
+        }
+
+        .normal-row {
+            border-left: 5px solid #4CAF50;
+        }
+
+        .overweight-row {
+            border-left: 5px solid #FF9800;
+        }
+
+        .obesity-row {
+            border-left: 5px solid #F44336;
+        }
+
+        .result-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .bmi-indicator {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+            margin: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .indicator-text {
+            margin-left: 20px;
+            text-align: left;
+        }
+
+        .indicator-text p {
+            margin: 5px 0;
         }
     </style>
 </head>
@@ -336,9 +429,44 @@
                 <div id="result" class="result">
                     <h3>Your Health Score</h3>
                     <p><strong>Age:</strong> <span id="age"></span> years</p>
-                    <div class="bmi-value" id="bmiValue"></div>
-                    <div class="bmi-category" id="bmiCategory"></div>
+                    
+                    <div class="result-container">
+                        <div class="bmi-indicator" id="bmiIndicator"></div>
+                        <div class="indicator-text">
+                            <p><strong>BMI Value:</strong> <span id="bmiValue" style="font-size: 24px;"></span></p>
+                            <p><strong>Status:</strong> <span id="bmiCategory" style="font-size: 18px;"></span></p>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- BMI Chart Reference -->
+                <div class="chart-title">BMI Reference Chart</div>
+                <table class="bmi-chart">
+                    <thead>
+                        <tr>
+                            <th>BMI Range</th>
+                            <th>Weight Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="underweight-row">
+                            <td><strong>Below 18.5</strong></td>
+                            <td>Underweight</td>
+                        </tr>
+                        <tr class="normal-row">
+                            <td><strong>18.5 - 24.9</strong></td>
+                            <td>Normal weight</td>
+                        </tr>
+                        <tr class="overweight-row">
+                            <td><strong>25.0 - 29.9</strong></td>
+                            <td>Overweight</td>
+                        </tr>
+                        <tr class="obesity-row">
+                            <td><strong>30.0 and above</strong></td>
+                            <td>Obesity</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
@@ -409,6 +537,12 @@
             const height = parseFloat(document.getElementById('height').value);
             const dob = new Date(document.getElementById('dob').value);
             
+            // Validate inputs
+            if (weight <= 0 || height <= 0) {
+                alert('Please enter valid weight and height values');
+                return;
+            }
+            
             // Calculate BMI using formula: BMI = weight / (height)^2
             const bmi = weight / (height * height);
             
@@ -423,18 +557,24 @@
             // Determine BMI category
             let category = '';
             let categoryColor = '';
+            let indicatorColor = '';
+            
             if (bmi < 18.5) {
                 category = 'Underweight';
                 categoryColor = '#2196F3';
+                indicatorColor = '#2196F3';
             } else if (bmi >= 18.5 && bmi < 25) {
                 category = 'Normal Weight';
                 categoryColor = '#4CAF50';
+                indicatorColor = '#4CAF50';
             } else if (bmi >= 25 && bmi < 30) {
                 category = 'Overweight';
                 categoryColor = '#FF9800';
+                indicatorColor = '#FF9800';
             } else {
-                category = 'Obese';
+                category = 'Obesity';
                 categoryColor = '#F44336';
+                indicatorColor = '#F44336';
             }
             
             // Display results
@@ -443,6 +583,11 @@
             document.getElementById('bmiValue').style.color = categoryColor;
             document.getElementById('bmiCategory').textContent = category;
             document.getElementById('bmiCategory').style.color = categoryColor;
+            
+            // Set indicator circle
+            const indicator = document.getElementById('bmiIndicator');
+            indicator.textContent = bmi.toFixed(1);
+            indicator.style.backgroundColor = indicatorColor;
             
             // Show results section
             document.getElementById('result').classList.add('show');
