@@ -386,281 +386,44 @@
             margin: 5px 0;
         }
 
-        /* Recommendation Styles */
-        .recommendation-box {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            border-left: 5px solid #0077B6;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            display: none;
-        }
-
-        .recommendation-box.show {
-            display: block;
-        }
-
-        .recommendation-box h4 {
-            color: #0077B6;
-            margin-top: 0;
-            font-size: 18px;
-        }
-
-        .recommendation-text {
-            color: #023047;
-            font-size: 16px;
-            line-height: 1.6;
-            margin: 10px 0;
-        }
-
-        .recommendation-list {
-            color: #023047;
-            font-size: 15px;
-            margin: 15px 0;
-        }
-
-        .recommendation-list li {
-            margin: 8px 0;
-            margin-left: 20px;
-        }
-
-        .scale-container {
+        /* Health Score Report Styles */
+        .health-report-box {
+            background-color: #F0F9FF;
+            padding: 25px;
             margin: 20px 0;
-            padding: 15px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-        }
-
-        .scale-item {
-            display: flex;
-            align-items: center;
-            margin: 10px 0;
-        }
-
-        .scale-dot {
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-
-        .scale-label {
-            color: #023047;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        /* Obesity Section Styles */
-        .obesity-section {
-            background-color: #FFEBEE;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 5px solid #D32F2F;
-            margin-top: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #00B4D8;
+            box-shadow: 0 4px 12px rgba(0, 180, 216, 0.1);
             display: none;
+            border: 2px solid #00B4D8;
         }
 
-        .obesity-section.show {
+        .health-report-box.show {
             display: block;
         }
 
-        .obesity-section h5 {
-            color: #B71C1C;
-            font-size: 18px;
+        .health-report-box h2 {
+            color: #0077B6;
+            font-size: 28px;
             margin-top: 0;
-            margin-bottom: 15px;
-        }
-
-        .subsection {
             margin-bottom: 20px;
         }
 
-        .subsection-title {
-            color: #C62828;
-            font-weight: bold;
+        .health-report-content {
+            color: #023047;
             font-size: 16px;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
+            line-height: 1.8;
+            white-space: pre-wrap;
+            word-wrap: break-word;
         }
 
-        .section-emoji {
-            margin-right: 10px;
-            font-size: 20px;
+        .health-report-content ul {
+            margin: 15px 0;
+            padding-left: 30px;
         }
 
-        .subsection-content {
-            background-color: white;
-            padding: 12px;
-            border-radius: 5px;
-            color: #023047;
-            line-height: 1.6;
-        }
-
-        .tips-list {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .tips-list li {
-            background-color: white;
-            padding: 10px;
+        .health-report-content li {
             margin: 8px 0;
-            border-radius: 5px;
-            border-left: 3px solid #D32F2F;
-            color: #023047;
-        }
-
-        .warning-box {
-            background-color: #FFF3E0;
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 5px solid #F57C00;
-            margin-top: 15px;
-        }
-
-        .warning-box h6 {
-            color: #E65100;
-            margin-top: 0;
-            font-size: 15px;
-        }
-
-        .warning-box p {
-            color: #023047;
-            margin: 8px 0;
-            font-size: 14px;
-        }
-
-        .critical-warning {
-            background-color: #FFCDD2;
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 5px solid #C62828;
-            margin-top: 15px;
-        }
-
-        .critical-warning h6 {
-            color: #B71C1C;
-            margin-top: 0;
-            font-size: 15px;
-            font-weight: bold;
-        }
-
-        .critical-warning p {
-            color: #023047;
-            margin: 8px 0;
-            font-size: 14px;
-        }
-
-        .critical-warning ul {
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-
-        .critical-warning li {
-            color: #023047;
-            margin: 6px 0;
-        }
-
-        .dont-box {
-            background-color: #FCE4EC;
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 5px solid #C2185B;
-            margin-top: 15px;
-        }
-
-        .dont-box h6 {
-            color: #880E4F;
-            margin-top: 0;
-            font-size: 15px;
-        }
-
-        .dont-list {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .dont-list li {
-            color: #023047;
-            margin: 8px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .dont-list li:before {
-            content: "✕";
-            position: absolute;
-            left: 0;
-            color: #C2185B;
-            font-weight: bold;
-        }
-
-        .goal-box {
-            background-color: #E0F2F1;
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 5px solid #00897B;
-            margin-top: 15px;
-        }
-
-        .goal-box h6 {
-            color: #004D40;
-            margin-top: 0;
-            font-size: 15px;
-        }
-
-        .goal-box p {
-            color: #023047;
-            margin: 8px 0;
-            font-size: 14px;
-        }
-
-        .goal-box ul {
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-
-        .goal-box li {
-            color: #023047;
-            margin: 6px 0;
-        }
-
-        .reminder-box {
-            background-color: #FCE4EC;
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 5px solid #E91E63;
-            margin-top: 15px;
-        }
-
-        .reminder-box h6 {
-            color: #880E4F;
-            margin-top: 0;
-            font-size: 15px;
-        }
-
-        .reminder-box p {
-            color: #023047;
-            margin: 8px 0;
-            font-size: 14px;
-        }
-
-        .reminder-box ul {
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-
-        .reminder-box li {
-            color: #023047;
-            margin: 6px 0;
-        }
-
-        .success-checkmark {
-            color: #2ECC71;
-            font-weight: bold;
-            margin-right: 8px;
         }
     </style>
 </head>
@@ -685,185 +448,34 @@
                         <label for="weight">Weight (kg):</label>
                         <input type="number" id="weight" name="weight" step="0.1" required placeholder="Enter your weight">
                     </div>
-                    
+                   
                     <!-- Height Section -->
                     <div class="form-group">
                         <label for="height">Height (m):</label>
                         <input type="number" id="height" name="height" step="0.01" required placeholder="Enter your height (e.g., 1.75)">
                     </div>
-                    
+                   
                     <!-- Date of Birth Section -->
                     <div class="form-group">
                         <label for="dob">Date of Birth:</label>
                         <input type="date" id="dob" name="dob" required>
                     </div>
-                    
+                   
                     <!-- Submit Button -->
                     <button type="submit" class="health-form-button">Calculate BMI</button>
                 </form>
-                
+               
                 <!-- Results Section -->
                 <div id="result" class="result">
                     <h3>Your Health Score</h3>
                     <p><strong>Age:</strong> <span id="age"></span> years</p>
-                    
+                   
                     <div class="result-container">
                         <div class="bmi-indicator" id="bmiIndicator"></div>
                         <div class="indicator-text">
                             <p><strong>BMI Value:</strong> <span id="bmiValue" style="font-size: 24px;"></span></p>
                             <p><strong>Status:</strong> <span id="bmiCategory" style="font-size: 18px;"></span></p>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Recommendation Section -->
-                <div id="recommendationBox" class="recommendation-box">
-                    <h4>📋 Health Recommendations</h4>
-                    <div class="recommendation-text" id="recommendationText"></div>
-                    
-                    <div class="scale-container">
-                        <strong style="color: #0077B6;">Health Status Scale:</strong>
-                        <div class="scale-item">
-                            <div class="scale-dot" style="background-color: #2196F3;"></div>
-                            <span class="scale-label">Underweight - Below 18.5</span>
-                        </div>
-                        <div class="scale-item">
-                            <div class="scale-dot" style="background-color: #4CAF50;"></div>
-                            <span class="scale-label">Normal Weight - 18.5 to 24.9</span>
-                        </div>
-                        <div class="scale-item">
-                            <div class="scale-dot" style="background-color: #FF9800;"></div>
-                            <span class="scale-label">Overweight - 25.0 to 29.9</span>
-                        </div>
-                        <div class="scale-item">
-                            <div class="scale-dot" style="background-color: #F44336;"></div>
-                            <span class="scale-label">Obesity - 30.0 and above</span>
-                        </div>
-                    </div>
-                    
-                    <ul class="recommendation-list" id="recommendationList"></ul>
-                </div>
-
-                <!-- Obesity Detailed Section -->
-                <div id="obesityDetailSection" class="obesity-section">
-                    <h5>⚠️ Obesity Health Management Guide</h5>
-
-                    <!-- Confirm with Healthcare Professional -->
-                    <div class="subsection">
-                        <div class="subsection-title">
-                            <span class="section-emoji">✅ 1.</span>
-                            <span>Confirm With a Healthcare Professional</span>
-                        </div>
-                        <div class="subsection-content">
-                            <p style="margin: 0;"><strong style="color: #C62828;">A doctor should assess BMI along with growth charts (for teens), waist size, blood pressure, and overall health.</strong></p>
-                            <p style="margin: 8px 0;">BMI alone does not tell the full story.</p>
-                        </div>
-                    </div>
-
-                    <!-- Focus on Health -->
-                    <div class="subsection">
-                        <div class="subsection-title">
-                            <span class="section-emoji">✅ 2.</span>
-                            <span>Focus on Health, Not Just Weight</span>
-                        </div>
-                        <div class="subsection-content">
-                            <p style="margin: 0;"><strong style="color: #C62828;">The goal is to improve health habits — not to "diet hard" or lose weight fast.</strong></p>
-                            <p style="margin: 8px 0;">Small, sustainable changes lead to lasting results.</p>
-                        </div>
-                    </div>
-
-                    <!-- Improve Eating Habits -->
-                    <div class="subsection">
-                        <div class="subsection-title">
-                            <span class="section-emoji">🥗 3.</span>
-                            <span>Improve Eating Habits (Gradual Changes)</span>
-                        </div>
-                        <div class="subsection-content">
-                            <strong style="color: #C62828;">Do This:</strong>
-                            <ul class="tips-list">
-                                <li>Eat 3 balanced meals daily (don't skip meals)</li>
-                                <li>Fill half your plate with vegetables or fruit</li>
-                                <li>Choose whole grains instead of refined carbs</li>
-                                <li>Include protein (eggs, beans, fish, chicken, yogurt)</li>
-                                <li>Drink mostly water</li>
-                                <li>Reduce sugary drinks and processed snacks</li>
-                            </ul>
-                            <strong style="color: #C62828; margin-top: 10px; display: block;">🚫 Avoid:</strong>
-                            <ul class="tips-list">
-                                <li>Crash diets or cutting out entire food groups</li>
-                                <li>Skipping meals</li>
-                                <li>Extreme restriction</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Increase Physical Activity -->
-                    <div class="subsection">
-                        <div class="subsection-title">
-                            <span class="section-emoji">🚶 4.</span>
-                            <span>Increase Physical Activity Slowly</span>
-                        </div>
-                        <div class="subsection-content">
-                            <strong style="color: #C62828;">For teens:</strong>
-                            <ul class="tips-list">
-                                <li>Aim for about 60 minutes of movement daily</li>
-                                <li>Start simple: walking, cycling, swimming, sports, dancing</li>
-                                <li>Add light strength training 2–3 times per week</li>
-                                <li>Start small if needed — even 10–15 minutes at first is okay</li>
-                                <li>Pick activities you enjoy to stay motivated</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Sleep & Screen Time -->
-                    <div class="subsection">
-                        <div class="subsection-title">
-                            <span class="section-emoji">😴 5.</span>
-                            <span>Sleep & Screen Time</span>
-                        </div>
-                        <div class="subsection-content">
-                            <ul class="tips-list">
-                                <li>8–10 hours of sleep each night</li>
-                                <li>Reduce late-night screen time</li>
-                                <li>Poor sleep affects hunger hormones</li>
-                                <li>Set a consistent sleep schedule</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Critical Warning -->
-                    <div class="critical-warning">
-                        <h6>⚠️ See a Doctor If There Is:</h6>
-                        <ul style="margin: 10px 0; padding-left: 20px;">
-                            <li>Shortness of breath</li>
-                            <li>Joint pain</li>
-                            <li>Extreme fatigue</li>
-                            <li>Family history of diabetes or heart disease</li>
-                        </ul>
-                        <p><strong>Medical guidance is important for safe progress.</strong></p>
-                    </div>
-
-                    <!-- Healthy Goal -->
-                    <div class="goal-box">
-                        <h6>🎯 Healthy Goal</h6>
-                        <p><strong>For teens, the goal is often:</strong></p>
-                        <ul style="margin: 10px 0; padding-left: 20px;">
-                            <li>Growing taller while weight stays stable</li>
-                            <li>Or slow, gradual weight reduction (if doctor recommends)</li>
-                        </ul>
-                        <p><strong>Safe change is slow — usually no more than 0.25–0.5 kg (0.5–1 lb) per week.</strong></p>
-                    </div>
-
-                    <!-- Important Reminder -->
-                    <div class="reminder-box">
-                        <h6>💛 Important Reminder</h6>
-                        <ul style="margin: 10px 0; padding-left: 20px;">
-                            <li>Avoid weight-loss pills or extreme diets</li>
-                            <li>Don't compare yourself to social media</li>
-                            <li>Health improvements matter more than fast results</li>
-                            <li>You are worthy regardless of your weight</li>
-                            <li>Seek support from family, friends, or professionals</li>
-                        </ul>
                     </div>
                 </div>
 
@@ -896,6 +508,12 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+
+        <!-- Health Score Report Section -->
+        <div class="health-report-box" id="healthReportBox">
+            <h2>📋 Health Score Report</h2>
+            <div class="health-report-content" id="reportContent"></div>
         </div>
 
         <div class="box-secondary">
@@ -957,89 +575,195 @@
     </div>
 
     <script>
-        const recommendations = {
-            underweight: {
-                summary: "You are <strong>Underweight</strong>. While you may not have excess weight, it's important to ensure you're getting adequate nutrition and maintaining overall health.",
-                tips: [
-                    "Eat nutrient-dense foods with healthy calories (nuts, avocados, olive oil, whole grains)",
-                    "Increase protein intake to support muscle development (lean meats, fish, legumes, dairy)",
-                    "Eat 5-6 smaller meals throughout the day instead of 3 large meals",
-                    "Include healthy fats from fish, seeds, and nut butters",
-                    "Consult a healthcare provider to rule out any underlying health issues",
-                    "Consider strength training to build muscle mass",
-                    "Stay hydrated and get adequate sleep for overall wellness"
-                ],
-                showDetailSection: null
-            },
-            normal: {
-                summary: "You have a <strong>Normal Weight</strong> range. Congratulations! You're in a healthy weight category. Focus on maintaining this through balanced nutrition and regular exercise.",
-                tips: [
-                    "Continue eating a balanced diet rich in fruits, vegetables, whole grains, and lean proteins",
-                    "Aim for 150 minutes of moderate aerobic activity per week",
-                    "Maintain consistent exercise habits (cardio, strength training, flexibility work)",
-                    "Stay hydrated by drinking adequate water daily",
-                    "Get 7-9 hours of quality sleep each night",
-                    "Monitor your weight regularly to catch any changes early",
-                    "Manage stress through meditation, yoga, or other relaxation techniques",
-                    "Limit processed foods, sugar, and excessive salt intake"
-                ],
-                showDetailSection: null
-            },
-            overweight: {
-                summary: "You are <strong>Overweight</strong>. While not in the obesity range, reducing weight gradually can improve your overall health and reduce disease risk.",
-                tips: [
-                    "Consult a healthcare provider or nutritionist for personalized advice",
-                    "Create a modest calorie deficit (500 calories/day for gradual weight loss)",
-                    "Increase daily physical activity gradually (start with 30 minutes most days)",
-                    "Reduce portion sizes and eat slowly to improve satiety",
-                    "Eliminate sugary drinks and limit alcohol consumption",
-                    "Increase fiber intake through vegetables, fruits, and whole grains",
-                    "Practice mindful eating - avoid eating while distracted",
-                    "Set realistic weight loss goals (0.5-1 kg per week is healthy)",
-                    "Track food intake to become aware of eating patterns",
-                    "Find physical activities you enjoy to maintain consistency"
-                ],
-                showDetailSection: null
-            },
-            obesity: {
-                summary: "You are in the <strong>Obesity</strong> category. This requires immediate lifestyle changes to reduce health risks including heart disease, diabetes, and other conditions.",
-                tips: [
-                    "Seek professional medical guidance from a doctor or health specialist immediately",
-                    "Consider working with a registered dietitian for a personalized nutrition plan",
-                    "Start with low-impact exercise like walking, swimming, or cycling (15-20 minutes daily)",
-                    "Gradually increase exercise duration and intensity as fitness improves",
-                    "Focus on whole foods: lean proteins, vegetables, fruits, whole grains",
-                    "Reduce calorie intake progressively and avoid crash diets",
-                    "Eliminate sugary beverages, fried foods, and processed snacks",
-                    "Practice portion control using smaller plates",
-                    "Address emotional eating and develop healthy coping mechanisms",
-                    "Join a support group or consider behavioral therapy",
-                    "Monitor weight weekly but focus on long-term sustainable changes",
-                    "Sleep adequately and manage stress - both affect weight management",
-                    "Set small achievable goals and celebrate progress",
-                    "Consider medical interventions if recommended by your doctor"
-                ],
-                showDetailSection: 'obesity'
-            }
+        const healthReports = {
+            underweight: `✅ Healthy Ways to Gain Weight
+
+1️⃣ Eat More — But Smart
+Try to:
+• Eat 3 main meals
+• Add 2–3 snacks daily
+• Don't skip breakfast
+Good high-calorie, healthy foods:
+• 🥜 Nuts & peanut butter
+• 🥑 Avocado
+• 🧀 Cheese & yogurt
+• 🥛 Milk or smoothies
+• 🍳 Eggs
+• 🍚 Rice, pasta, potatoes
+• 🥩 Chicken, fish, beans
+________________________________________
+2️⃣ Add Calories Without Huge Portions
+If you feel full quickly:
+• Add olive oil to food
+• Put nut butter in smoothies
+• Drink milk instead of water sometimes
+• Add cheese to meals
+Small additions = extra calories 💪
+________________________________________
+3️⃣ Do Strength Exercises (Not Just Cardio)
+Muscle adds healthy weight.
+Good options:
+• Push-ups
+• Squats
+• Light dumbbells
+• Resistance bands
+2–4 times per week is enough.
+________________________________________
+4️⃣ Drink Smoothies (Easy Extra Calories)
+Example:
+• Milk
+• Banana
+• Peanut butter
+• Oats
+• Honey
+Blend → Easy 400–600 calories.
+________________________________________
+5️⃣ Sleep Well
+Teens need 8–10 hours.
+Growth hormone works during sleep.
+________________________________________
+⚠️ Important
+If someone:
+• Has no appetite
+• Feels tired all the time
+• Is losing weight without trying
+• Feels dizzy often
+They should see a doctor. It could be:
+• Fast metabolism
+• Thyroid issues
+• Stress
+• Digestive problems
+________________________________________
+🚫 Don't Do This
+• Don't eat only junk food
+• Don't compare your body to others
+• Don't try extreme diets
+Your body is still developing.`,
+
+            normal: `A normal BMI means your weight is within a healthy range for your height. This generally suggests a lower risk of weight-related health problems.
+
+However:
+• BMI does not measure muscle vs. fat
+• It does not measure fitness level
+• It does not show nutrition quality
+• It does not reflect mental health or overall lifestyle
+
+So even with a normal BMI, it's still important to:
+• Eat balanced meals
+• Stay physically active
+• Get enough sleep
+• Have regular health checkups
+________________________________________
+🎯 Key Point:
+A normal BMI is a good sign, but overall healthy habits matter more than the number alone.`,
+
+            overweight: `✅ 1. Make Sure It's Accurate
+• A doctor or school nurse can check BMI, growth charts, and overall health.
+• For teens, body changes during growth are normal — numbers alone don't tell the full story.
+________________________________________
+✅ 2. Focus on Healthy Habits (Not Crash Diets)
+🥗 Balanced Eating
+• 3 regular meals + 1–2 healthy snacks
+• Fill half your plate with vegetables or fruit
+• Choose whole grains (brown rice, whole wheat bread)
+• Include protein (eggs, beans, chicken, yogurt)
+• Drink mostly water
+Avoid:
+• Skipping meals
+• Extreme dieting
+• Cutting out entire food groups
+________________________________________
+✅ 3. Move Your Body Daily
+• Aim for 60 minutes of activity per day (for teens)
+• Walking, cycling, sports, dancing, swimming
+• Add light strength exercises 2–3 times per week
+Movement helps metabolism, mood, and confidence.
+________________________________________
+✅ 4. Sleep & Screen Time
+• 8–10 hours of sleep
+• Limit late-night screen time
+• Poor sleep can affect weight hormones
+________________________________________
+⚠️ See a Doctor If:
+• There's rapid weight gain
+• You feel tired, breathless easily, or have joint pain
+• There's family history of diabetes or thyroid issues
+________________________________________
+🚫 Avoid:
+• Weight-loss pills
+• Starving yourself
+• Comparing your body to social media
+________________________________________
+🎯 Healthy Goal
+For teens, the goal is often:
+• Growing taller while weight stabilizes
+• Or slow, gradual weight loss (if recommended by a doctor)
+Healthy change is slow — about 0.25–0.5 kg (0.5–1 lb) per week at most.`,
+
+            obese: `✅ 1. Confirm With a Healthcare Professional
+• A doctor should assess BMI along with growth charts (for teens), waist size, blood pressure, and overall health.
+• BMI alone does not tell the full story.
+________________________________________
+✅ 2. Focus on Health, Not Just Weight
+The goal is to improve health habits — not to "diet hard" or lose weight fast.
+________________________________________
+🥗 3. Improve Eating Habits (Gradual Changes)
+• Eat 3 balanced meals daily (don't skip meals)
+• Fill half your plate with vegetables or fruit
+• Choose whole grains instead of refined carbs
+• Include protein (eggs, beans, fish, chicken, yogurt)
+• Drink mostly water
+• Reduce sugary drinks and processed snacks
+🚫 Avoid crash diets or cutting out entire food groups.
+________________________________________
+🚶 4. Increase Physical Activity Slowly
+For teens:
+• Aim for about 60 minutes of movement daily
+• Start simple: walking, cycling, swimming, sports, dancing
+• Add light strength training 2–3 times per week
+Start small if needed — even 10–15 minutes at first is okay.
+________________________________________
+😴 5. Sleep & Screen Time
+• 8–10 hours of sleep
+• Reduce late-night screen time
+• Poor sleep affects hunger hormones
+________________________________________
+⚠️ See a Doctor If There Is:
+• Shortness of breath
+• Joint pain
+• Extreme fatigue
+• Family history of diabetes or heart disease
+Medical guidance is important for safe progress.
+________________________________________
+🎯 Healthy Goal
+For teens, the goal is often:
+• Growing taller while weight stays stable
+• Or slow, gradual weight reduction (if doctor recommends)
+Safe change is slow — usually no more than 0.25–0.5 kg (0.5–1 lb) per week.
+________________________________________
+💛 Important Reminder
+• Avoid weight-loss pills or extreme diets
+• Don't compare yourself to social media
+• Health improvements matter more than fast results`
         };
 
         document.getElementById('healthScoreForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
+           
             // Get form values
             const weight = parseFloat(document.getElementById('weight').value);
             const height = parseFloat(document.getElementById('height').value);
             const dob = new Date(document.getElementById('dob').value);
-            
+           
             // Validate inputs
             if (weight <= 0 || height <= 0) {
                 alert('Please enter valid weight and height values');
                 return;
             }
-            
+           
             // Calculate BMI using formula: BMI = weight / (height)^2
             const bmi = weight / (height * height);
-            
+           
             // Calculate age
             const today = new Date();
             let age = today.getFullYear() - dob.getFullYear();
@@ -1047,75 +771,54 @@
             if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
                 age--;
             }
-            
+           
             // Determine BMI category
             let category = '';
             let categoryColor = '';
             let indicatorColor = '';
-            let categoryKey = '';
-            
+            let reportKey = '';
+           
             if (bmi < 18.5) {
                 category = 'Underweight';
                 categoryColor = '#2196F3';
                 indicatorColor = '#2196F3';
-                categoryKey = 'underweight';
+                reportKey = 'underweight';
             } else if (bmi >= 18.5 && bmi < 25) {
                 category = 'Normal Weight';
                 categoryColor = '#4CAF50';
                 indicatorColor = '#4CAF50';
-                categoryKey = 'normal';
+                reportKey = 'normal';
             } else if (bmi >= 25 && bmi < 30) {
                 category = 'Overweight';
                 categoryColor = '#FF9800';
                 indicatorColor = '#FF9800';
-                categoryKey = 'overweight';
+                reportKey = 'overweight';
             } else {
                 category = 'Obesity';
                 categoryColor = '#F44336';
                 indicatorColor = '#F44336';
-                categoryKey = 'obesity';
+                reportKey = 'obese';
             }
-            
+           
             // Display results
             document.getElementById('age').textContent = age;
             document.getElementById('bmiValue').textContent = bmi.toFixed(2);
             document.getElementById('bmiValue').style.color = categoryColor;
             document.getElementById('bmiCategory').textContent = category;
             document.getElementById('bmiCategory').style.color = categoryColor;
-            
+           
             // Set indicator circle
             const indicator = document.getElementById('bmiIndicator');
             indicator.textContent = bmi.toFixed(1);
             indicator.style.backgroundColor = indicatorColor;
-            
-            // Display recommendations
-            const recData = recommendations[categoryKey];
-            document.getElementById('recommendationText').innerHTML = recData.summary;
-            
-            const recList = document.getElementById('recommendationList');
-            recList.innerHTML = '';
-            recData.tips.forEach(tip => {
-                const li = document.createElement('li');
-                li.textContent = tip;
-                recList.appendChild(li);
-            });
-            
-            // Hide obesity detail section
-            document.getElementById('obesityDetailSection').classList.remove('show');
-            
-            // Show appropriate detail section
-            if (recData.showDetailSection === 'obesity') {
-                document.getElementById('obesityDetailSection').classList.add('show');
-            }
-            
-            // Show results and recommendations
+           
+            // Show results section
             document.getElementById('result').classList.add('show');
-            document.getElementById('recommendationBox').classList.add('show');
-            
-            // Scroll to results
-            setTimeout(() => {
-                document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
-            }, 100);
+
+            // Display health report
+            const reportContent = document.getElementById('reportContent');
+            reportContent.textContent = healthReports[reportKey];
+            document.getElementById('healthReportBox').classList.add('show');
         });
     </script>
 
