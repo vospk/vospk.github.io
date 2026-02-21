@@ -400,7 +400,7 @@
 
         <!-- Health Score Form Section -->
         <div class="health-score-box">
-            <h2>Health Score  📈 </h2>
+            <h2>Health Score</h2>
             <div class="form-container">
                 <form id="healthScoreForm">
                     <!-- Weight Section -->
