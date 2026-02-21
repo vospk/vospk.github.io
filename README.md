@@ -181,17 +181,165 @@
             background-color: #0099ba;
         }
 
+        /* Health Score Form Styles */
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .health-score-box {
+            background-color: #EAF4FF;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 15px;
+            border-left: 5px solid #0077B6;
+            box-shadow: 0 4px 12px rgba(0, 119, 182, 0.1);
+        }
+
+        .health-score-box h2 {
+            color: #0077B6;
+            font-size: 36px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #023047;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #00B4D8;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #0077B6;
+            background-color: #f9f9f9;
+        }
+
+        .form-group input::placeholder {
+            color: #999;
+        }
+
+        .health-form-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #0077B6;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 0;
+        }
+
+        .health-form-button:hover {
+            background-color: #005a8d;
+        }
+
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #F0F0F0;
+            border-radius: 4px;
+            display: none;
+            border-left: 5px solid #00B4D8;
+        }
+
+        .result.show {
+            display: block;
+        }
+
+        .result h3 {
+            color: #0077B6;
+            margin-top: 0;
+        }
+
+        .result p {
+            color: #023047;
+            margin: 10px 0;
+        }
+
+        .bmi-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #4CAF50;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .bmi-category {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1> Welcome to Vospk</h1>
+        <h1>Welcome to Vospk</h1>
 
         <div class="box">
             <h2>About Us</h2>
             <p>At our core, we are dedicated to empowering individuals with smarter, data-driven health insights. Our disease prediction platform uses advanced algorithms and intelligent analysis to assess symptoms, lifestyle factors, and health indicators to provide personalized risk evaluations. Beyond prediction, our website offers tailored health recommendations, practical wellness advice, and an easy-to-understand health score that reflects your overall well-being. We believe that preventive care starts with awareness, and our mission is to make reliable health guidance accessible, simple, and actionable for everyone. By combining technology with health expertise, we aim to help you make informed decisions and take proactive steps toward a healthier future.</p>
             <button>Learn More</button>
+        </div>
+
+        <!-- Health Score Form Section -->
+        <div class="health-score-box">
+            <h2>Health Score</h2>
+            <div class="form-container">
+                <form id="healthScoreForm">
+                    <!-- Weight Section -->
+                    <div class="form-group">
+                        <label for="weight">Weight (kg):</label>
+                        <input type="number" id="weight" name="weight" step="0.1" required placeholder="Enter your weight">
+                    </div>
+                    
+                    <!-- Height Section -->
+                    <div class="form-group">
+                        <label for="height">Height (m):</label>
+                        <input type="number" id="height" name="height" step="0.01" required placeholder="Enter your height (e.g., 1.75)">
+                    </div>
+                    
+                    <!-- Date of Birth Section -->
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <button type="submit" class="health-form-button">Calculate BMI</button>
+                </form>
+                
+                <!-- Results Section -->
+                <div id="result" class="result">
+                    <h3>Your Health Score</h3>
+                    <p><strong>Age:</strong> <span id="age"></span> years</p>
+                    <div class="bmi-value" id="bmiValue"></div>
+                    <div class="bmi-category" id="bmiCategory"></div>
+                </div>
+            </div>
         </div>
 
         <div class="box-secondary">
@@ -251,6 +399,55 @@
         <h3>🎨 Our Color Palette</h3>
         <p>Our carefully selected color scheme combines professional blues with modern accents, creating a clean and trustworthy appearance that works for any industry.</p>
     </div>
+
+    <script>
+        document.getElementById('healthScoreForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const weight = parseFloat(document.getElementById('weight').value);
+            const height = parseFloat(document.getElementById('height').value);
+            const dob = new Date(document.getElementById('dob').value);
+            
+            // Calculate BMI using formula: BMI = weight / (height)^2
+            const bmi = weight / (height * height);
+            
+            // Calculate age
+            const today = new Date();
+            let age = today.getFullYear() - dob.getFullYear();
+            const monthDiff = today.getMonth() - dob.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+                age--;
+            }
+            
+            // Determine BMI category
+            let category = '';
+            let categoryColor = '';
+            if (bmi < 18.5) {
+                category = 'Underweight';
+                categoryColor = '#2196F3';
+            } else if (bmi >= 18.5 && bmi < 25) {
+                category = 'Normal Weight';
+                categoryColor = '#4CAF50';
+            } else if (bmi >= 25 && bmi < 30) {
+                category = 'Overweight';
+                categoryColor = '#FF9800';
+            } else {
+                category = 'Obese';
+                categoryColor = '#F44336';
+            }
+            
+            // Display results
+            document.getElementById('age').textContent = age;
+            document.getElementById('bmiValue').textContent = bmi.toFixed(2);
+            document.getElementById('bmiValue').style.color = categoryColor;
+            document.getElementById('bmiCategory').textContent = category;
+            document.getElementById('bmiCategory').style.color = categoryColor;
+            
+            // Show results section
+            document.getElementById('result').classList.add('show');
+        });
+    </script>
 
 </body>
 </html>
