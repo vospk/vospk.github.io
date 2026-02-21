@@ -394,12 +394,8 @@
             border-radius: 15px;
             border-left: 5px solid #00B4D8;
             box-shadow: 0 4px 12px rgba(0, 180, 216, 0.1);
-            display: none;
-            border: 2px solid #00B4D8;
-        }
-
-        .health-report-box.show {
             display: block;
+            border: 2px solid #00B4D8;
         }
 
         .health-report-box h2 {
@@ -415,6 +411,22 @@
             line-height: 1.8;
             white-space: pre-wrap;
             word-wrap: break-word;
+        }
+
+        .placeholder-message {
+            color: #0077B6;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            padding: 40px 20px;
+            background-color: white;
+            border-radius: 10px;
+            border: 2px dashed #00B4D8;
+        }
+
+        .placeholder-message p {
+            margin: 10px 0;
+            color: #0077B6;
         }
 
         .health-report-content ul {
@@ -513,7 +525,12 @@
         <!-- Health Score Report Section -->
         <div class="health-report-box" id="healthReportBox">
             <h2>📋 Health Score Report</h2>
-            <div class="health-report-content" id="reportContent"></div>
+            <div id="reportContent">
+                <div class="placeholder-message">
+                    <p>📊 Your personalized health report will appear here</p>
+                    <p>Fill in your weight, height, and date of birth above and click "Calculate BMI" to generate your customized health recommendations.</p>
+                </div>
+            </div>
         </div>
 
         <div class="box-secondary">
@@ -815,10 +832,10 @@ ________________________________________
             // Show results section
             document.getElementById('result').classList.add('show');
 
-            // Display health report
+            // Display health report with formatted text
             const reportContent = document.getElementById('reportContent');
             reportContent.textContent = healthReports[reportKey];
-            document.getElementById('healthReportBox').classList.add('show');
+            reportContent.classList.add('health-report-content');
         });
     </script>
 
